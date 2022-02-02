@@ -8,7 +8,6 @@
     "debug": "node --inspect-brk server.js"
   },
   "dependencies": {
-    "@headlessui/react": "^1.4.3",
     "@types/react-redux": "^7.1.22",
     "daisyui": "^1.24.3",
     "decimal.js": "^10.3.1",
@@ -31,6 +30,7 @@
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.10",
     "@vitejs/plugin-react": "^1.0.7",
+    "@windmill/react-ui": "^0.6.0",
     "autoprefixer": "^10.4.2",
     "chai": "^4.3.6",
     "cross-env": "^7.0.3",

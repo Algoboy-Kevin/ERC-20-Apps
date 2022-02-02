@@ -136,11 +136,11 @@ const ERC20Create = () => {
   }
 
   const SubmitButton = () => {
-    const buttonEnable = <button className="btn btn-outline w-full" onClick={createToken}>Create Token</button>
+    const buttonEnable = <button className="w-full btn btn-outline" onClick={createToken}>Create Token</button>
 
-    const buttonLoading = <button className="btn w-full btn-disabled ">LOADING...</button>
+    const buttonLoading = <button className="w-full btn btn-disabled ">LOADING...</button>
 
-    const buttonImport = <button className="btn w-full " onClick={() => {setMenu(2)}}>Import Token</button>
+    const buttonImport = <button className="w-full btn " onClick={() => {setMenu(2)}}>Import Token</button>
 
     return (
       <div className="w-full">
@@ -154,10 +154,10 @@ const ERC20Create = () => {
   }
 
   return (
-    <div className="card max-w-6xl">
-    <div className="card-body flex flex-col gap-4 bg-base-100 shadow">
+    <div className="max-w-6xl card">
+    <div className="flex flex-col gap-4 shadow card-body bg-base-100">
       <div className="flex flex-col gap-5"> 
-      <div className="grid grid-cols-2 gap-4 text-lg font-bold items-end">
+      <div className="grid items-end grid-cols-2 gap-4 text-lg font-bold">
         <h1 className="col-span-2 text-4xl font-black tracking-tight">Create Token</h1>
         <Input 
           title="Name" 

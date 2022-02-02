@@ -7,7 +7,7 @@ const ERC20TokenInfo = () => {
     const [data, setData] = useRecoilState(TokenDataState)
 
     return (
-      <div className="overflow-x-auto  ">
+      <div className="overflow-x-auto ">
         <table className="table w-full table-compact">
           <thead>
             <tr >
@@ -50,8 +50,8 @@ const ERC20TokenInfo = () => {
   }
 
   return (
-    <div className="card max-w-2xl mx-auto">
-      <div className="card-boy  flex flex-col gap-10 items-stretch bg-base-100 p-5">
+    <div className="max-w-2xl mx-auto card">
+      <div className="flex flex-col items-stretch gap-10 p-5 card-boy bg-base-100">
         <h1 className="col-span-2 text-4xl font-black tracking-tight">Token Info</h1>
         <Table />
       </div>
