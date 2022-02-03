@@ -4,6 +4,7 @@ import { useRecoilState } from "recoil";
 import ERC20TokenInfo from "./ERC20TokenInfo";
 import { AppState } from "../../store";
 import { Menu } from "../../interface";
+import NewForm from "../../UI/newInputForm";
 
 const ERC20App = () => {
   const [appState, setAppState] = useRecoilState(AppState);
@@ -23,10 +24,10 @@ const ERC20App = () => {
   }
 
   return (
-  <div className="flex flex-col gap-4 items-stretch w-full h-full">
+  <div className="flex flex-col items-stretch w-full h-full gap-4">
       {appState.menu !== Menu.MAIN && <BackButton/>}
       {appState.menu == Menu.MAIN && <ERC20MainMenu onClickCreate={onClickCreate}/>}
-      {appState.menu == Menu.CREATE && <ERC20Create />}
+      {appState.menu == Menu.CREATE && <NewForm />}
       {appState.menu == Menu.IMPORT && <ERC20TokenInfo />}
     </div>
   )

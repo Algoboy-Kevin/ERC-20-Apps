@@ -10,6 +10,7 @@ interface inputForm {
   min?:number,
   disabled?:boolean,
   tokenSymbol?:string,
+  required?:boolean,
   onClick?:any,
 }
 
@@ -31,6 +32,7 @@ export const Input = (props:inputForm) => {
         className="input input-bordered" 
         onChange={props.onChange}
         disabled={props.disabled}
+        required={props.required}
       />
     </div> 
   )

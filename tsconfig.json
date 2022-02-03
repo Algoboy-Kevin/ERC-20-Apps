@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "target": "es2018",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
@@ -17,6 +18,7 @@
   },
   "include": [
     "./src", 
+    "./src/typechain",
     "./src/solidity",
     "declarations.d.ts", 
     "./hardhat.config.ts"

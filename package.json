@@ -8,15 +8,20 @@
     "debug": "node --inspect-brk server.js"
   },
   "dependencies": {
+    "@typechain/ethers-v5": "^9.0.0",
+    "@typechain/hardhat": "^4.0.0",
     "@types/react-redux": "^7.1.22",
     "daisyui": "^1.24.3",
     "decimal.js": "^10.3.1",
     "express": "^4.17.2",
+    "formik": "^2.2.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.1",
     "theme-change": "^2.0.2",
-    "web3": "^1.6.0"
+    "typechain": "^7.0.0",
+    "web3": "^1.6.0",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
