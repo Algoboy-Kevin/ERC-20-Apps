@@ -1,23 +1,16 @@
-import { Button } from '@windmill/react-ui'
-import { Badge } from '@windmill/react-ui'
-
 const ERC20MainMenu = (props:{onClickCreate:any}) => {
   return (
-    <div className="h-screen hero bg-base-200">
+    <div className="h-full hero bg-base-200 ">
       <div className="text-center hero-content">
         <div className="max-w-md">
           <h1 className="mb-5 text-5xl font-bold">
-                Main Menu
+                Welcome to ERC20 Token Apps
               </h1> 
               <p className="mb-5">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
+                This application enables you to create your own ERC20 and view your deployment result. 
               </p> 
-          <Button className=" btn" size="larger" onClick={() => props.onClickCreate()}>Create Token</Button>
-          <Badge>primary</Badge>
-          <Badge type="neutral">neutral</Badge>
-          <Badge type="success">success</Badge>
-          <Badge type="danger">danger</Badge>
-          <Badge type="warning">warning</Badge>
+          <button className=" btn" onClick={() => props.onClickCreate()}>Create Token</button>
+         
         </div>
       </div>
     </div>

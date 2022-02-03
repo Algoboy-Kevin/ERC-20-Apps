@@ -1,7 +1,6 @@
 import Decimal from 'decimal.js';
-import { ethers } from 'ethers';
 
-const applyDecimals = (rawValue:any, decimals:any, isPositive = false) => {
+export const applyDecimals = (rawValue:any, decimals:any, isPositive = false) => {
   if(!rawValue)
   return "";
 
@@ -21,5 +20,3 @@ export const toDecimal = (rawValue:any, decimals:any, isPositive = false) => {
   const Result = new Decimal(rawValue).mul(Power).toFixed()
   return Result;
 }
-
-export default applyDecimals;

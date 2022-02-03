@@ -175,51 +175,8 @@ const ERC20Create = () => {
         <div className="flex flex-col gap-5"> 
         <div className="grid items-end grid-cols-2 gap-4 text-lg font-bold">
           <h1 className="col-span-2 text-4xl font-black tracking-tight">
-            Create Token
+            Import Token
           </h1>
-          <Input 
-            title="Name" 
-            type="text"
-            placeholder={inputState.name} 
-            onChange ={(e:React.ChangeEvent<HTMLInputElement>) => {
-              e.preventDefault();
-              onChangeHandler("name", e)}}
-          />
-          <Input 
-            title="Symbol" 
-            type="text"
-            placeholder={inputState.symbol}
-            onChange ={(e:React.ChangeEvent<HTMLInputElement>) => onChangeHandler("symbol", e)}
-          />
-          <InputNumber 
-            title="Initial Supply"
-            type="number"
-            min={1}
-            placeholder={inputState.initialSupply.toString()}
-            tokenSymbol={inputState.symbol}
-            defaultValue={applyDecimals(inputState.initialSupplyRaw,inputState.decimals)}
-            onChange={(e:React.ChangeEvent<HTMLInputElement>) => {
-              onChangeHandler("initialSupply", e)}}
-          />
-          <Input 
-            title="Decimals" 
-            type="number"
-            min={1}
-            max={20}
-            defaultValue={inputState.decimals}
-            placeholder={inputState.decimals.toString()} 
-            onChange={(e:React.ChangeEvent<HTMLInputElement>) => {
-              onChangeHandler("decimals", e)}}
-          />
-          <Input 
-            title="Initial supply (raw)" 
-            type="number"
-            placeholder={toDecimal(inputState.initialSupply,inputState.decimals)}
-            value={toDecimal(inputState.initialSupply,inputState.decimals)}
-            disabled={true}
-            onChange ={(e:React.ChangeEvent<HTMLInputElement>) => onChangeHandler("initialSupplyRaw", e)}
-          />
-          <SubmitButton />
           <ImportToken
             title="Or Import Token at"
             placeholder="ERC20Token Address"

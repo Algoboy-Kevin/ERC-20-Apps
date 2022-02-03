@@ -1,4 +1,15 @@
 import { atom } from "recoil";
+import { AppStateType, Menu } from "../interface";
+import { AlertType } from "../UI/Alert";
+
+export const WalletState = atom({
+  key: 'walletState',
+  default: {
+    connected: false,
+    message: "",
+    address: "",
+  }
+})
 
 export const InputState = atom({
   key: 'inputState',
@@ -7,29 +18,23 @@ export const InputState = atom({
     symbol: "PTNK",
     initialSupply: 1,
     decimals: 18,
-    initialSupplyRaw: "1000000000000000000"
+    initialSupplyRaw: "1000000000000000000",
+    address: "",
   }
-})
-
-export const LoadingState = atom({
-  key: "loadingState",
-  default: false,
 })
 
 export const TokenDataState = atom({
   key: "tokenDataState",
   default: [
-    { id: 0, name: "Address", value: ""},
-    { id: 1, name: "Name", value: ""},
-    { id: 2, name: "Symbol", value: ""},
-    { id: 3, name: "TotalSupply", value: ""},
-    { id: 4, name: "Decimals", value: ""},
-    { id: 5, name: "Current Balance", value: ""},
   ]
 })
 
-
-export const MenuState = atom({
-  key: "menuState",
-  default: 0,
+export const AppState = atom({
+  key: "appState",
+  default: {
+    menu: Menu.MAIN,
+    loading: false,
+    message: "",
+    alert: AlertType.DEFAULT,
+  }
 })

@@ -1,17 +1,17 @@
 interface inputForm {
   className?: string,
   title: string,
-  type: string,
+  type?: string,
   placeholder: string,
-  onChange: any,
+  onChange?: any,
   value?: any,
   defaultValue?: any,
   max?:number,
   min?:number,
   disabled?:boolean,
   tokenSymbol?:string,
+  onClick?:any,
 }
-
 
 export const Input = (props:inputForm) => {
   return (
@@ -60,5 +60,24 @@ export const InputNumber = (props:inputForm) => {
         </label>
       </div>
     </div> 
+  )
+}
+
+export const ImportToken = (props:inputForm) => {
+  return (
+    <div className="form-control">
+      <label className="label">
+        <span className="label-text">{props.title}</span>
+      </label> 
+      <div className="flex space-x-2">
+        <input 
+          type="text" 
+          placeholder={props.placeholder}
+          onChange={props.onChange}
+          className="w-full input input-primary input-bordered"
+        /> 
+        <button type="submit" onClick={props.onClick} className="btn btn-primary">Import</button>
+      </div>
+    </div>
   )
 }
