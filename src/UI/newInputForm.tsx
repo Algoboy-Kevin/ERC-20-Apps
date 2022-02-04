@@ -1,4 +1,4 @@
-import { Formik, Form, useField, ErrorMessage, useFormikContext, FormikContextType } from "formik"
+import { Formik, Form, useField, ErrorMessage, useFormikContext } from "formik"
 import { applyDecimals, toDecimal } from "../utils/ethereumAPI"
 import * as Yup from "yup";
 import { useEffect } from "react";
@@ -95,7 +95,6 @@ const NewForm = () => {
   return (
     <Formik initialValues={initialValues} validationSchema={validate} onSubmit={values=>{console.log(values)}}>
       {formik => (
-    
         <div >
           <h1>Smart Contract</h1>
           <Form className="grid grid-cols-2 gap-4">
@@ -108,13 +107,9 @@ const NewForm = () => {
               <button className="btn btn-primary " type="submit">Register</button>
               <button className="btn " type="reset">reset</button>
             </div>
-            
           </Form>
         </div>
       )}
-
-
-      
     </Formik>
   )
 }

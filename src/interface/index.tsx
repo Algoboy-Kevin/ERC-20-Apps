@@ -2,6 +2,7 @@ export enum Menu {
   MAIN = 0,
   CREATE = 1,
   IMPORT = 2,
+  VIEW = 3,
 }
 
 export enum ErrorType {
@@ -16,3 +17,13 @@ export interface AppStateType {
   message: string,
   alert: string,
 }
+
+export interface InputTokenType {
+  name: string,
+  symbol: string,
+  initialSupply: number,
+  decimals: number,
+  initialSupplyRaw: string,
+}
+
+

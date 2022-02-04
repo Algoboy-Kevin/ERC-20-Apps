@@ -10,10 +10,6 @@ import { WalletState } from "./store";
 
 function App() {
   const [walletState, setWalletState] = useRecoilState(WalletState);
-  
-  const [walletConnected, setWalletConnected] = useState(false);
-  const [instruction, setInstruction] = useState("waiting for connection with wallet")
-  const [signerAddress, setSignerAddress] = useState("");
 
   useEffect(() => {
     const connectWallet = async () => {

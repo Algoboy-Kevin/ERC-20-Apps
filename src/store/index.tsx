@@ -19,7 +19,6 @@ export const InputState = atom({
     initialSupply: 1,
     decimals: 18,
     initialSupplyRaw: "1000000000000000000",
-    address: "",
   }
 })
 
@@ -36,5 +35,13 @@ export const AppState = atom({
     loading: false,
     message: "",
     alert: AlertType.DEFAULT,
+  }
+})
+
+export const ViewingState = atom({
+  key: "viewingState",
+  default: {
+    address: "",
+    tokenData: []
   }
 })

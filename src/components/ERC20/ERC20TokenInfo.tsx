@@ -1,10 +1,14 @@
-import { useRecoilState, useRecoilValue } from "recoil"
-import { TokenDataState } from "../../store"
+import { useRecoilState } from "recoil"
+import { AppState, TokenDataState } from "../../store"
+import { AlertType } from "../../UI/Alert"
+import Alert from "../../UI/Alert"
 
 const ERC20TokenInfo = () => {
+  const [appState, setAppState] = useRecoilState(AppState)
 
   const Table = () => {
     const [data, setData] = useRecoilState(TokenDataState)
+    
 
     return (
       <div className="overflow-x-auto ">
@@ -50,17 +54,17 @@ const ERC20TokenInfo = () => {
   }
 
   return (
-    <div className="max-w-2xl mx-auto">
-      <div className="card">
-        <div className="card-body flex flex-col items-stretch gap-10 p-5 card-boy bg-base-100">
+    <div className="w-full ">
+     <div className="card">
+        <div className="flex flex-col items-stretch gap-10 p-5 card-body card-boy bg-base-100">
           <h1 className="col-span-2 text-4xl font-black tracking-tight">
             Token Info
           </h1>
           <Table />
+          <Alert 
+            type={appState.alert} 
+            message={appState.message} />
         </div>
-      </div>
-      <div className="card">
-        <div className="card-body"></div>
       </div>
     </div>
 
